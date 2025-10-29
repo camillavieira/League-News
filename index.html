@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>League Info</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="manifest.json" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoL PWA</title>
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🎮 League Info</h1>
-    <p>Descubra informações sobre jogadores e campeões do LoL</p>
-  </header>
 
-  <main>
-    <section class="input-area">
-      <input id="summonerName" type="text" placeholder="Digite o nome do invocador..." />
-      <button id="searchBtn">Buscar</button>
-    </section>
+  <h1>League of Legends - Busca Invocador e Campeões</h1>
 
-    <section id="result" class="result"></section>
-    <section id="local" class="local"></section>
-  </main>
+  <!-- Formulário de busca -->
+  <form id="searchForm">
+    <input type="text" id="summonerName" placeholder="Digite o nome do invocador" required>
+    <button type="submit">Buscar</button>
+  </form>
 
-  <footer>
-    <p>Feito por Camilla 💜</p>
-  </footer>
+  <!-- Informações do invocador -->
+  <div id="summonerInfo"></div>
 
+  <!-- Container de campeões -->
+  <h2>Todos os Campeões</h2>
+  <div id="championsContainer"></div>
+
+  <!-- Script do app -->
   <script src="app.js"></script>
 </body>
 </html>
